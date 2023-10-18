@@ -9,6 +9,9 @@ message continente{
     string apellido = 2;
     string estado = 3;
 }
+message responder_todo{
+    string mensaje = 1;
+}
 
 message registro_datanode{
     string id = 1;
@@ -32,4 +35,11 @@ message consulta_estado{
 message respuesta_estado{
     string nombre = 1;
     string apellido = 2;
+}
+
+service Enviar{
+    rpc Enviar_Continente (continente) returns (responder_todo);
+    rpc Registrar_en_Datanode (registro_datanode) returns (responder_todo);
+    rpc Consultar_por_Id (consulta_id) returns (respuesta_id);
+    rpc Consultar_por_Estado (consulta_estado) returns (respuesta_estado);
 }
