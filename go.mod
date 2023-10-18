@@ -1,4 +1,4 @@
-module github.com/tomiok/grpc-test-wishlist
+module github.com/ImMaldy/laboratorio2SD
 
 go 1.13
 
