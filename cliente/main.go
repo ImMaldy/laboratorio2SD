@@ -89,11 +89,12 @@ func main() {
 			Apellido: persona[1],
 			Estado:   persona[2],
 		})
+		fmt.Println("Estado enviado: " + persona[0] + " " + persona[1] + " " + persona[2])
 
 		if err != nil {
 			panic("error continente" + err.Error())
 		}
-		fmt.Println(res.Mensaje)
+		fmt.Println("[OMS]: " + res.Mensaje + "\n")
 	}
 
 	//enviar cada 3 segundos
@@ -122,11 +123,12 @@ func main() {
 			Apellido: persona[1],
 			Estado:   estado,
 		})
+		fmt.Println("Estado enviado: " + persona[0] + " " + persona[1] + " " + estado)
 
 		if err != nil {
 			panic("error continente" + err.Error())
 		}
-		fmt.Println(res.Mensaje)
+		fmt.Println("[OMS]: " + res.Mensaje + "\n")
 
 		time.Sleep(3 * time.Second)
 		cont++

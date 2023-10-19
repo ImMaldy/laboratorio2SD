@@ -16,7 +16,7 @@ type server struct {
 func (s *server) Enviar_Continente(ctx context.Context, req *pb.Continente) (*pb.ResponderTodo, error) {
 	fmt.Println(req.Nombre + " " + req.Apellido + " " + req.Estado)
 	return &pb.ResponderTodo{
-		Mensaje: "ok",
+		Mensaje: "Estado Recibido",
 	}, nil
 }
 
