@@ -33,8 +33,8 @@ message consulta_estado{
 }
 
 message respuesta_estado{
-    string nombre = 1;
-    string apellido = 2;
+    repeated string lista_nombres = 1;
+    
 }
 
 service Enviar{
